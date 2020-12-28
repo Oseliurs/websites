@@ -1,7 +1,7 @@
 body {
 	background-image: url(https://medias.kiwipal.com/photo/paysages/milford-sound-sauvage-header@2x.jpg);
 	background-repeat: no-repeat;
-	background-size: 100vh auto;
+	background-size: cover;
 	color:	aliceblue;
 	margin: 0px;
 	padding: 0px;
