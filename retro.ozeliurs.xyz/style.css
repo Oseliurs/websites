@@ -1,0 +1,286 @@
+/* Import de la Font Family Roboto de Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Variables du Site */
+:root {
+	--old-green: #33FF00;
+	--back-1: black;
+	--back-2: #282828;
+	font-family: "Roboto", sans-serif;
+}
+
+/* Style général de la page. ----------------------------------------------------------------------------------------- */
+* {
+	padding: 0px;
+	margin: 0px;
+	text-align: justify;
+}
+
+body {
+	background: var(--back-1);
+	color: var(--old-green);
+}
+
+blockquote {
+	padding-left: 20px;
+}
+
+li {
+	list-style-type: none;
+	margin-left: 20px;
+}
+
+h2, h3 {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+main {
+	margin-left: 60px;
+	height: 100%;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+
+/* Barre de Nav ----------------------------------------------------------------------------------------- */
+
+#barnav {
+	width: 60px;
+	height: 100vh;
+	position: fixed;
+	transition: all 250ms;
+	background-color: var(--back-2)
+}
+
+#barnav:hover {
+	width: 150px;
+	background-color: var(--back-2);
+
+}
+
+#barnav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	margin-left:9px;
+
+}
+
+#barnav ul li {
+	padding: 0px;
+	margin: 0px;
+}
+
+#barnav > ul > li > a {
+	display:flex;
+	align-items: center;
+	height: 60px;
+	color: var(--old-green);
+	font: inherit;
+	text-decoration: none;
+}
+
+#barnav > ul > li > a > svg {
+	height: 2.5em;
+	fill: var(--old-green);
+}
+
+#barnav > ul > li > a > span {
+	display: none;
+	margin-left: 20px;
+}
+
+#barnav:hover > ul > li > a > span {
+	display: block;
+}
+
+#barnav ul li a img {
+
+}
+
+/* Style du Header ----------------------------------------------------------------------------------------- */
+header {
+	height: auto;
+	display:flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color: var(--back-2);
+
+}
+
+header h1 {
+	margin: auto;
+	margin-left: 10px;
+	font-size: 6vw
+}
+
+header div a img {
+	margin:10px;
+	width: 150px;
+	height: 150px;
+	border: 3px solid #fff;
+}
+
+/* Part ----------------------------------------------------------------------------------------- */
+.part {
+	width:80%;
+	background-color: var(--back-2);
+}
+
+/* Part Responsive ----------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+	.part {
+		width: auto;
+		padding: 10px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.part {
+		padding: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+}
+
+/* me ----------------------------------------------------------------------------------------- */
+
+#me {
+	display: flex;
+	/*overflow: auto;*/
+}
+
+.biolist {
+	display: flex;
+	justify-content: space-between;
+}
+
+#me div:last-child ul {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+/* me Responsive ----------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 900px) {
+	#me {
+		flex-direction: column;
+	}
+
+	#me div:first-child {
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	#me div:last-child {
+		flex-shrink: 0;
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#me {
+		flex-direction: row;
+	}
+
+	#me div:first-child {
+		margin-right: 20px;
+		margin-bottom: 0px;
+	}
+
+	#me div:last-child {
+		flex-shrink: 0;
+		width: 300px;
+	}
+}
+
+/* formations ----------------------------------------------------------------------------------------- */
+
+#formations {
+
+}
+
+/* Competences ----------------------------------------------------------------------------------------- */
+
+#competences li ul li {
+	display: flex;
+	flex-direction: row;
+}
+
+#competences > li > ul > li > div > img {
+	height: 50px;
+	margin-right:10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.lang, .soft {
+	margin-top: 21px;
+}
+
+/* Expériences ----------------------------------------------------------------------------------------- */
+
+#exp > ul > li {
+	display: flex;
+	flex-direction: row;
+}
+
+#exp > ul >li > div > img {
+	height: 50px;
+	margin-right:10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/* Style du Forms ----------------------------------------------------------------------------------------- */
+
+#contact {
+	height :100%;
+}
+
+#contact > h2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+#contact > form {
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#contact > form > * {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+/**/
+
+.project a {
+	color: inherit;
+	text-decoration: none;
+	
+}
+
+/* Style du Footer ----------------------------------------------------------------------------------------- */
+footer {
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: var(--back-2);
+}
+
