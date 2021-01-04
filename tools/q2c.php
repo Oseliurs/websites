@@ -11,7 +11,7 @@
             $text = $_POST["textdata"];
             $filename = date("d-m-Y_h-i-s");
             $ipath = "content/ifilepro/" . $filename . ".pro";
-            $opath = "content/ofilecmake/" . $filename . ".txt";
+            $opath = "/var/www/tools/content/ofilecmake/" . $filename . ".txt";
             file_put_contents($ipath, $text);
             shell_exec("sudo python3 cmake/pro2cmake.py " . $ipath . " -o " . $opath);
             sleep(2);
